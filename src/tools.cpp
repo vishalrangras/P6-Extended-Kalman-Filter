@@ -28,13 +28,13 @@ VectorXd Tools::CalculateRMSE(const vector<VectorXd> &estimations,
   }
   
   // Calculating difference squared of each value
-  for (unsigned int i=0; i < estimations.size(); ++i){
+  for (unsigned int i = 0; i < estimations.size(); ++i){
     
-	VectorXd difference = estimations[i] - ground_truth[i];
+	VectorXd residual = estimations[i] - ground_truth[i];
 	
 	// Element-wise multiplication to obtain squares of each data pointer
-	difference = difference.array() * difference.array();
-	rmse += difference;
+	residual = residual.array() * residual.array();
+	rmse += residual;
 	
   }
   
