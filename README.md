@@ -11,6 +11,8 @@ The goals for this project are:
 5. Implement Update function for Lidar Measurement Update and UpdateEKF for Radar Measurement Update in kalman_filter.cpp.
 6. Implement CalculateRMSE and CalculateJacobian function in tools.cpp which will be used as helper functions.
 
+*** [Rubric](https://review.udacity.com/#!/rubrics/748/view) Points ***
+
 ### Building the Project and Execution ###
 
 1. Clone this repo.
@@ -25,4 +27,5 @@ The goals for this project are:
 [image1]: ./img/Dataset-01.png "Dataset-01"
 [image2]: ./img/Dataset-02.png "Dataset-02"
 
-## [Rubric](https://review.udacity.com/#!/rubrics/748/view) Points
+![alt text][image1]
+![alt text][image2]
