@@ -97,9 +97,9 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
 	  // Projections of vector on x-axis and y-axis are given by cos and sin components respectively
 	  // Here we get values of px and vx using cos comp of ro, phi and ro_dot
 	  // And we get values of py and vy using sin comp of ro, phi and ro_dot
-      ekf_.x_(0) = ro     * cos(phi);
-	  ekf_.x_(1) = ro     * sin(phi);      
-      ekf_.x_(2) = ro_dot * cos(phi);
+      ekf_.x_(0) = ro * cos(phi);
+	  ekf_.x_(1) = ro * sin(phi);
+	  ekf_.x_(2) = ro_dot * cos(phi);
 	  ekf_.x_(3) = ro_dot * sin(phi);
 	  
     }
@@ -156,6 +156,7 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
 			   dt_3/2*noise_ax, 0, dt_2*noise_ax, 0,
 			   0, dt_3/2*noise_ay, 0, dt_2*noise_ay;
 
+  
   ekf_.Predict();
 
   /*****************************************************************************
